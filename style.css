@@ -1,0 +1,122 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(0, 0%, 95%);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100rem;
+  box-shadow: 0 1.2rem 2.4rem rgb(0, 0, 0, 0.15);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 4.8rem 4.1rem;
+}
+
+.card--sedan {
+  background-color: var(--orange);
+}
+
+.card--suv {
+  background-color: var(--cyan);
+}
+
+.card--luxury {
+  background-color: var(--darkCyan);
+}
+
+.icon {
+  margin-bottom: 2.4rem;
+}
+
+.heading {
+  margin-bottom: 3.2rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+}
+
+.sub-heading {
+  line-height: 1.6;
+  margin-bottom: 8.6rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  padding: 1.6rem 3.2rem;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.15);
+}
+
+.btn:hover,
+.btn:active {
+  background: none;
+  color: hsl(0, 0%, 95%);
+  box-shadow: inset 0 0 0 3px hsl(0, 0%, 95%);
+}
+
+.btn--sedan {
+  color: var(--orange);
+}
+
+.btn--suv {
+  color: var(--cyan);
+}
+
+.btn--luxury {
+  color: var(--darkCyan);
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 4.8rem 2.4rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-heading {
+    margin-bottom: 5rem;
+  }
+}
